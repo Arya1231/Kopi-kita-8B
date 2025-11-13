@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Kita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+          <h1 class="Logo">KOPI KITA</h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="tentang.html">Tentang</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+    </header>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami & Peta Lokasi</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap; /* Untuk responsif */
+        }
+
+        h1 {
+            text-align: center;
+            color: #b68973;
+            width: 100%;
+            padding: 20px 0 10px;
+            margin: 0;
+        }
+
+        /* --- Bagian Kiri: Form & Info --- */
+        .contact-content {
+            flex: 1; /* Ambil setengah lebar */
+            min-width: 350px; /* Minimal lebar di layar kecil */
+            padding: 30px;
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: #b68973;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        /* --- Bagian Kanan: Google Maps --- */
+        .map-container {
+            flex: 1; /* Ambil setengah lebar */
+            min-width: 350px;
+            background: #eee;
+        }
+
+        .map-container h2 {
+            padding: 15px;
+            margin: 0;
+            background-color: #b68973;
+            color: white;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .map-iframe {
+            width: 100%;
+            /* Tinggi diatur agar seimbang dengan kolom sebelahnya */
+            height: 500px; 
+            border: none;
+            display: block;
+        }
+
+        /* Responsif untuk layar kecil */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                margin: 20px;
+            }
+            .map-iframe {
+                height: 300px; /* Tinggi peta lebih pendek di ponsel */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <h1>Hubungi Tim Kami</h1>
+
+        <div class="contact-content">
+            <h2>Kirimkan Pesan Langsung</h2>
+            
+            <form action="submit_form.php" method="POST">
+                <div>
+                    <label for="nama">Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" required>
+                </div>
+                <div>
+                    <label for="email">Email Anda:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="pesan">Pesan:</label>
+                    <textarea id="pesan" name="pesan" rows="5" required></textarea>
+                </div>
+                <button type="submit">Kirim Sekarang</button>
+            </form>
+
+            <h3 style="margin-top: 30px; color: #b68973;">Informasi Lainnya</h3>
+            <address>
+                <strong>Alamat:</strong> Jl. Contoh Hebat No. 45<br>
+                <strong>Telepon:</strong> <a href="tel:+62123456789">021-123456789</a><br>
+                <strong>Email:</strong> <a href="mailto:info@situscontoh.com">info@situscontoh.com</a>
+            </address>
+
+        </div>
+
+        <div class="map-container">
+            <h2>Lokasi Kami</h2>
+            <iframe 
+                class="map-iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.071912353392!2d106.8208428147693!3d-6.208763595500958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4e13!3m3!1m2!1s0x2e69f3c7d6d5d5d5%3A0x6b4c6e9e4f5a3a4!2sJl.%20Kebon%20Kopi%20No.%201696%2C%20Jakarta%20Selatan!5e0!3m2!1sid!2sid!4v1638217200000!5m2!1sid!2sid" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+        </div>
+
+    </div>
+
+</body>
+</html>
